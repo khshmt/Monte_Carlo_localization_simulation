@@ -1,5 +1,5 @@
 # MCL-Simulation
-this Monte Carlo localization simulation source is Udacity Robotics Software Engineer Nanodegreeand, the code is the same code in `MCL_LAB` of Udacity ND but with some edits done by me. 
+this Monte Carlo localization simulation source is Udacity Robotics Software Engineer Nanodegree, the code is the same code in `MCL_LAB` of Udacity ND but with some edits done by me. 
 
 ### prerequisites
 

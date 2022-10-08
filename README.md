@@ -3,8 +3,8 @@ this Monte Carlo localization simulation source is Udacity Robotics Software Eng
 
 ### prerequisites
 
-* g++-7.5 or g++-5.5
-* python2.7
+* g++-5.5 OR above
+* python3.8
 
 
 ### Compiling the Program
@@ -18,12 +18,14 @@ make
 Before you run the program, make sure the `Images` directory is empty by running 
 
 ```bash
-make clean
+mkdir build
+cd build
+cmake ..
 ```
 then run the executable file `app`
 
 ```bash
-./app
+./build/bin/app
 ```
 Wait for the program to iterate `50` times.
 

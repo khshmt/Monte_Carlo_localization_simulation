@@ -5,6 +5,7 @@
 #include <stdexcept> // throw errors
 #include <random> //C++ 11 Random Numbers
 #include <vector>
+#include <filesystem>
 
 namespace plt = matplotlibcpp;
 
@@ -219,8 +220,15 @@ void visualization(uint64_t n, Robot robot, int step, std::vector<Robot> p, std:
     plt::plot({ robot.x }, { robot.y }, "bo");
 
     //Save the image and close the plot
-    plt::save("../../Images/Step" + std::to_string(step) + ".png");
-    plt::clf();
+    std::filesystem::path img{"../../Images"};
+    if(std::filesystem::is_directory(img)) {
+        plt::save(img.string() + std::to_string(step) + ".png");
+        plt::clf();
+    } else {
+        std::filesystem::create_directory(img);
+        plt::save(img.string() + std::to_string(step) + ".png");
+        plt::clf();
+    }
 }
 
 int main()

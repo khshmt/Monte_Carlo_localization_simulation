@@ -220,7 +220,7 @@ void visualization(uint64_t n, Robot robot, int step, std::vector<Robot> p, std:
     plt::plot({ robot.x }, { robot.y }, "bo");
 
     //Save the image and close the plot
-    std::filesystem::path img{"../../Images"};
+    std::filesystem::path img{"../../Images/"};
     if(std::filesystem::is_directory(img)) {
         plt::save(img.string() + std::to_string(step) + ".png");
         plt::clf();
